@@ -9,10 +9,16 @@ html(lang="en")
     title main page
   body
     .wrapper
+
       .welcome-section
+
         section.fullscreen-section.hello
           .container.hello__container
             include ./pug/components/hello/header.pug
             include ./pug/components/hello/content.pug
             include ./pug/components/hello/scroll.pug
+
         section.fullscreen-section.about
+          .container
+            include ./pug/components/about/about.pug
+          include ./pug/components/about/triangles.pug
