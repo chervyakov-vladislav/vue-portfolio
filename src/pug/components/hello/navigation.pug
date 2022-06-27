@@ -1,0 +1,30 @@
+- 
+  const menuLinks = [
+      {
+        title: "Главная",
+        link: "#"
+      },{
+        title: "Обо мне",
+        link: "#"
+      },{
+        title: "Навыки",
+        link: "#"
+      },{
+        title: "Работы",
+        link: "#"      
+      },{
+        title: "Отзывы",
+        link: "#"      
+      },{
+        title: "Связаться",
+        link: "#"      
+      }
+    ]
+
+nav.navigation
+  ul.navigtion__list
+    each link in menuLinks
+      li.navigation__item
+        a(
+          href=`${link.link}`
+          ).navigation__link= link.title

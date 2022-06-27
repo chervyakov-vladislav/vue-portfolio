@@ -1,0 +1,23 @@
+.scroll {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll__btn {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  color: $text-color;
+
+
+  &::after {
+    content: "";
+    background: svg-load('scroll.svg', fill=$text-color, width=100%, height=100%) center center no-repeat;
+    width: 28px;
+    height: 30px;
+    margin-left: 20px;
+  }
+}
