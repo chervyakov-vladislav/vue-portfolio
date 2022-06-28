@@ -1,0 +1,40 @@
+.skills {
+  background: #fff;
+  position: relative;
+  overflow: visible;
+  padding: 100px 0;
+
+    &:after {
+      content: "";
+      background: url("~images/content/hands.png") center center / contain no-repeat;
+      position: absolute;
+      width: 600px;
+      height: 700px;
+      overflow: visible;
+      left: -100px;
+      top: 10%;
+    }
+}
+
+.skills__descriprion {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  z-index: 10;
+  margin-bottom: 70px;  
+}
+
+.skills-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.skills-text {
+  opacity: .5;
+  font-weight: 600;
+  width: 35%;
+  text-align: left;
+  line-height: 1.5;
+}
