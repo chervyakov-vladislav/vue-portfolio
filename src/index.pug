@@ -33,3 +33,11 @@ html(lang="en")
           h2.works__title Мои работы
           .works__content
             include ./pug/components/works/slider.pug
+
+      .budda-section
+        svg.triangles__budda(viewBox="0 0 1000 100" preserveAspectRatio="none")
+          polygon(points="0,0 500,100 1000,0")
+        .container
+          section.reviews
+            include ./pug/components/reviews/reviews.pug
+          section.form
