@@ -1,0 +1,74 @@
+.preview-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  position: relative;
+}
+
+
+.preview-description__skills {
+  margin-bottom: 30px;
+}
+
+.preview-description__skills-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preview-description__skill {
+  padding: 10px 20px;
+  border-radius: 40px;
+  background: #f3f5f9;
+  margin-right: 10px;
+  font-weight: 600;
+  opacity: .7;
+  font-size: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+.preview-description__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.preview-description__desc {
+  font-weight: 600;
+  opacity: .7;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.preview-description__link {
+  color: $links-color;
+  font-weight: 700;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.preview-description__link-icon {
+  width: 20px;
+  height: 20px;
+  fill: $links-color;
+  margin-right: 10px;
+}
+
+.preview-description__link-text {
+  display: block;
+}
+
+.preview-description__id {
+  font-size: 400px;
+  color: #e6e6e6;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: -55%;
+  line-height: .8;
+  z-index: -10;
+}

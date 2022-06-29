@@ -1,0 +1,44 @@
+include ./../../layout/mixins.pug
+
+- let descriptionSkills = [ "HTML", "CSS", "Javascript" ]
+
+.works__slider
+  .preview-slider
+    .preview-slider__buttons
+      .preview-slider__buttons-wrapper 
+        ul.preview-slider__dots
+          li.preview-slider__dots-item.preview-slider__dots-item--active 
+            +image("content/slider-preview.jpg","preview-slider__dots-img")
+          li.preview-slider__dots-item 
+            +image("content/slider-preview-mini-2.jpg","preview-slider__dots-img")
+          li.preview-slider__dots-item
+            +image("content/slider-preview-mini-3.jpg","preview-slider__dots-img")
+          li.preview-slider__dots-item 
+            +image("content/slider-preview-mini-4.jpg","preview-slider__dots-img")
+        .preview-slider__controls 
+          a(href="#" class="preview-slider__left")
+            +icon("arrow-down","preview-slider__icon")
+          a(href="#" class="preview-slider__right")
+            +icon("arrow-down","preview-slider__icon")
+
+    .preview-slider__container 
+      ul.prewiew-slider__list
+        li.prewiew-slider__item
+          +image("content/slider-preview.jpg", "prewiew-slider__img")
+        li.prewiew-slider__item
+          +image("content/slider-preview.jpg", "prewiew-slider__img")
+
+
+
+.works__description
+  .preview-description 
+    .preview-description__skills
+      ul.preview-description__skills-list
+        each skill in descriptionSkills
+          li.preview-description__skill= `${skill}`
+    h3.preview-description__title Сайт школы образования 
+    .preview-description__desc Этот парень проходил обучение веб-разработке! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+    a(href="#").preview-description__link 
+      +icon("link","preview-description__link-icon")
+      span.preview-description__link-text Посмотреть сайт
+    .preview-description__id 4
