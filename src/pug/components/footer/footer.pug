@@ -1,0 +1,47 @@
+- 
+  const menuLinks = [
+    {
+      "title": "Главная",
+      "link": "#"
+    },{
+      "title": "Обо мне",
+      "link": "#"
+    },{
+      "title": "Навыки",
+      "link": "#"
+    },{
+      "title": "Работы",
+      "link": "#"      
+    },{
+      "title": "Отзывы",
+      "link": "#"      
+    },{
+      "title": "Связаться",
+      "link": "#"      
+    }
+  ]
+include ./../../layout/mixins.pug
+
+
+
+.footer__left
+  .copyright &copy; 2022
+  .footer__userinfo 
+    .footer__username Владислав Червяков
+    .footer__userposition Личный сайт #[br] веб-разработчика
+
+//- переверстать на гридах
+.footer__right
+  .footer__nav 
+    ul.footer__nav-list 
+      each link in menuLinks
+        li.footer__nav-item
+          a(
+            href=`${link.link}`
+            ).footer__nav-link= link.title
+  .footer__desc 
+    .footer__socials 
+      include socials.pug
+    .footer__text
+      .footer__declaration Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
+      .footer__author Martin Golding
