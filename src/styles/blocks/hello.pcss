@@ -1,20 +1,30 @@
 .hello {
-  padding-top: 50px;
   position: relative;
 }
 
 .hello__container {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
+.hello__header {
+  padding-top: 50px;
+}
+
 .hello__content {
+  flex: .8;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  padding-bottom: 15%;
+}
+
+.hello__user-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  flex-direction: column;
 }
 
 
@@ -35,4 +45,11 @@
   font-weight: 900;
   line-height: .85;
   width: 700px;
+}
+
+.hello__scroll {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }

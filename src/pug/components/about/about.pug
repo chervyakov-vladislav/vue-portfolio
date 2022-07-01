@@ -9,17 +9,18 @@ include ./../../layout/mixins.pug
 
 .user
   .user__profile
-    .user__img
-      +image('content/user.jpg', 'user-pic')
-    .user__info
-      ul.user__props
-        li.user__city Проживаю:
-        li.user__age Возраст:
-        li.user__bday Родился:
-      ul.user__data
-        li.user__city-value= user.city
-        li.user__age-value= user.age
-        li.user__bday-value= user.bday
+    article.user-profile
+      .user-profile__img
+        +image('content/user.jpg', 'user-profile-pic')
+      .user-profile__info
+        ul.user-profile__props
+          li.user-profile__city Проживаю:
+          li.user-profile__age Возраст:
+          li.user-profile__bday Родился:
+        ul.user-profile__data
+          li.user-profile__city-value= user.city
+          li.user-profile__age-value= user.age
+          li.user-profile__bday-value= user.bday
   .user__description
     p.user__greeting Привет, меня зовут
     h2.user__name Владислав Червяков

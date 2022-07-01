@@ -1,0 +1,38 @@
+.user-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile__img {
+  width: 350px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.user-profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  box-shadow: 5px 5px 30px rgba($text-color, 0.3);
+  object-fit: cover;
+}
+
+.user-profile__info {
+  display: flex;
+  width: 350px;
+  justify-content: space-evenly;
+  font-weight: 600;
+}
+
+.user-profile__info ul li {
+  margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+}
+
+.user-profile__props {
+  opacity: .6;
+}

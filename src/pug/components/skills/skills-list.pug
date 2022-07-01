@@ -42,7 +42,7 @@ include ./../../layout/mixins.pug
 ul.competences
   - for (let i = 0; i < skills.length; i++)
     .competence__title= skills[i].listTitle
-    ul.skills-list
+    ul.skills-list.competence__skills
       - for (let j = 0; j < skills[i].skillsList.length; j++)
         li.skills-list__item
           span.skills-list__item-text= `${skills[i].skillsList[j].skillName}`

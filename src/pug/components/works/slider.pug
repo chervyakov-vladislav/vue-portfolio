@@ -2,6 +2,8 @@ include ./../../layout/mixins.pug
 
 - let descriptionSkills = [ "HTML", "CSS", "Javascript" ]
 
+//- нужно закинуть превью, кнопки и теги в отдельные компоненты
+
 .works__slider
   .preview-slider
     .preview-slider__buttons
@@ -33,12 +35,13 @@ include ./../../layout/mixins.pug
 .works__description
   .preview-description 
     .preview-description__skills
-      ul.preview-description__skills-list
+      ul.tag-list
         each skill in descriptionSkills
-          li.preview-description__skill= `${skill}`
+          li.tag-list__skill= `${skill}`
     h3.preview-description__title Сайт школы образования 
     .preview-description__desc Этот парень проходил обучение веб-разработке! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-    a(href="#").preview-description__link 
-      +icon("link","preview-description__link-icon")
-      span.preview-description__link-text Посмотреть сайт
+    .preview-description__link
+      a(href="#").webcite-link
+        +icon("link","webcite-link__icon")
+        span.webcite-link__text Посмотреть сайт
     .preview-description__id 4

@@ -7,7 +7,7 @@ mixin image(path, className)
   img(src=require(`images/${path}`) class=className)
 
 mixin circle(size, radius, strokeWidth=5, strokeColor,className)
-  svg(height=`${size}` width=`${size}` viewBox=`0 0 ${size} ${size}` class=className )
+  svg(height=`${size}` width=`${size}` viewBox=`0 0 ${size} ${size}` class=className preserveAspectRatio="none")
     circle(cx=`${(size)/2}` cy=`${(size)/2}` r=`${radius}` stroke=`#e9e9e9` stroke-width=`${strokeWidth}` fill='transparent')
     circle(cx=`${(size)/2}` cy=`${(size)/2}` r=`${radius}` stroke="url(#grad1)" stroke-width=`${strokeWidth+10}` fill='transparent' stroke-dasharray= `${radius*2*3.14-300}`)
     lineargradient#grad1(x1='0%' y1='0%' x2='100%' y2='0%')

@@ -16,17 +16,19 @@ html(lang="en")
           .container.hello__container
             include ./pug/components/hello/header.pug
             include ./pug/components/hello/content.pug
-            include ./pug/components/hello/scroll.pug
+            .hello__scroll
+              include ./pug/components/hello/scroll.pug
 
         section.about
           .container
             include ./pug/components/about/about.pug
-          include ./pug/components/about/triangles.pug
 
       section.skills
+        include ./pug/components/about/triangles.pug
         .container
           include ./pug/components/skills/description.pug
-          include ./pug/components/skills/skills-list.pug
+          .skills__competences
+            include ./pug/components/skills/skills-list.pug
 
       section.works
         .container
