@@ -1,0 +1,25 @@
+include ./../../layout/mixins.pug
+
+- 
+  const socialsArray = [
+    {
+      "name": "insta",
+      "link": "https://www.instagram.com/chervyakovvladislav/"
+    },{
+      "name": "vk",
+      "link": "https://vk.com/vladislavch"
+    },{
+      "name": "github",
+      "link": "https://github.com/chervyakov-vladislav"
+    }
+  ]
+ul.socials
+  each social in socialsArray 
+    li.socials__item
+      a(
+        class="socials__link"
+        href=`${social.link}`
+        target="_blank"
+        )
+        +icon(social.name, `${social.name}__icon`+` socials__icon`)
+

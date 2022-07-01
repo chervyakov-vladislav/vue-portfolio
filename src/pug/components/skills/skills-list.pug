@@ -1,0 +1,49 @@
+include ./../../layout/mixins.pug
+
+-
+  let skills = [
+    {
+      listTitle: "Front-end",
+      skillsList: [
+        {
+          skillName: "HTML5",
+          value: 10
+        },{
+          skillName: "CSS3",
+          value: 20
+        },{
+          skillName: "Javascript",
+          value: 30
+        },{
+          skillName: "Vue.js",
+          value: 40
+        }
+      ]
+    },{
+      listTitle: "Workflow",
+      skillsList: [
+        {
+          skillName: "GIT",
+          value: 50
+        },{
+          skillName: "Terminal",
+          value: 60
+        },{
+          skillName: "Gulp",
+          value: 70
+        },{
+          skillName: "Webpack",
+          value: 80
+        }
+      ]
+    }
+  ]
+
+ul.competences
+  - for (let i = 0; i < skills.length; i++)
+    .competence__title= skills[i].listTitle
+    ul.skills-list.competence__skills
+      - for (let j = 0; j < skills[i].skillsList.length; j++)
+        li.skills-list__item
+          span.skills-list__item-text= `${skills[i].skillsList[j].skillName}`
+          +circle(200, 80, 10, 'blue', 'skills-list__circle')

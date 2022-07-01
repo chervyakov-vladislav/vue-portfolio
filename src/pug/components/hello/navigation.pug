@@ -1,0 +1,10 @@
+- 
+  const menuLinks = require("../../../data/navmenu.json")
+
+nav.navigation
+  ul.navigtion__list
+    each link in menuLinks
+      li.navigation__item
+        a(
+          href=`${link.link}`
+          ).navigation__link= link.title

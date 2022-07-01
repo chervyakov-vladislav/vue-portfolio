@@ -1,0 +1,35 @@
+.skills-list {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.skills-list__item {
+  position: relative;
+  margin-right: 70px;
+  max-width: 150px;
+  margin-bottom: 90px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+.skills-list__item-text {
+  font-size: 18px;
+  font-weight: 700;
+  opacity: .5;
+  text-align: center;
+}
+
+.skills-list__circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(250deg);
+}

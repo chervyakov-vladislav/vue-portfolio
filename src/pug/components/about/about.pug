@@ -1,0 +1,27 @@
+include ./../../layout/mixins.pug
+
+-
+  const user = {
+    city: "Томск",
+    age: "29 лет",
+    bday: "9 июня 1993"
+  }
+
+.user
+  .user__profile
+    article.user-profile
+      .user-profile__img
+        +image('content/user.jpg', 'user-profile-pic')
+      .user-profile__info
+        ul.user-profile__props
+          li.user-profile__city Проживаю:
+          li.user-profile__age Возраст:
+          li.user-profile__bday Родился:
+        ul.user-profile__data
+          li.user-profile__city-value= user.city
+          li.user-profile__age-value= user.age
+          li.user-profile__bday-value= user.bday
+  .user__description
+    p.user__greeting Привет, меня зовут
+    h2.user__name Владислав Червяков
+    p.user__text  Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.

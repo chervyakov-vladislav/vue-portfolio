@@ -22,3 +22,7 @@ $ npm run имя_скрипта
 ```sh
 $ yarn имя_скрипта
 ```
+
+## github-pages:
+
+https://chervyakov-vladislav.github.io/vue-portfolio/
