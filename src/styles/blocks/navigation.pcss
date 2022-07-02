@@ -9,8 +9,17 @@
 
 .navigation__item {
   margin-right: 50px;
+  transition: .3s;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &:hover {
+      opacity: .6;
+    }
+
+    @include desktop {
+      margin-right: 30px;
     }
 }

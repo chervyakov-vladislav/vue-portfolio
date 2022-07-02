@@ -7,6 +7,9 @@
   justify-content: flex-end;
   width: 40%;
   margin-right: 50px;
+  @include desktop {
+    margin-right: 30px;
+  }
 }
 
 .user__description {
@@ -21,6 +24,10 @@
   line-height: 1.8;
   width: 65%;
   margin-top: 20px;
+
+  @include desktop {
+    width: 85%;
+  }
 }
 
 .user__name {

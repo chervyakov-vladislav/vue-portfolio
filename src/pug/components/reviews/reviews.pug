@@ -1,19 +1,18 @@
-include ./../../layout/mixins.pug
-
 .reviews-description 
   h2.reviews-description__title Что обо мне говорят
-  .reviews-description__btn 
-    a(href="#").reviews-description__btn-left
-      +icon("arrow-down","reviews-description__icon")
-    a(href="#").reviews-description__btn-right
-      +icon("arrow-down","reviews-description__icon")
+  .reviews-description__btn
+    .review-btns
+      a(href="#").review-btns__left
+        +icon("arrow-down","review-btns__icon")
+      a(href="#").review-btns__right
+        +icon("arrow-down","review-btns__icon")
 .reviews-slider
   .reviews-slider__container 
     ul.reviews-slider__wrapper
       li.reviews-slider__item
         +icon("quote","reviews-slider__icon")
         .reviews-slider__desc
-          .reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          blockquote.reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
           .reviews-slider__user 
             +image("content/user-old.jpg","reviews-slider__user-img")
             .reviews-slider__user-desc
@@ -22,7 +21,7 @@ include ./../../layout/mixins.pug
       li.reviews-slider__item
         +icon("quote","reviews-slider__icon")
         .reviews-slider__desc
-          .reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          blockquote.reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
           .reviews-slider__user 
             +image("content/user-old.jpg","reviews-slider__user-img")
             .reviews-slider__user-desc
@@ -31,7 +30,7 @@ include ./../../layout/mixins.pug
       li.reviews-slider__item
         +icon("quote","reviews-slider__icon")
         .reviews-slider__desc
-          .reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          blockquote.reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
           .reviews-slider__user 
             +image("content/user-old.jpg","reviews-slider__user-img")
             .reviews-slider__user-desc

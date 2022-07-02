@@ -10,6 +10,10 @@
 
 .form__container {
   width: 55%;
+
+    @include desktop {
+      width: 75%;
+    }
 }
 
 .form {
@@ -35,6 +39,10 @@
     &:last-child {
       margin-right: 0;
     }
+
+    @include desktop {
+      margin-right: 30px;
+    }
 }
 
 .form__block-text {
@@ -51,7 +59,9 @@
 .form__icon {
   width: 30px;
   height: 30px;
-  opacity: .3;
+  opacity: .5;
+  fill: $text-color;
+  transition: .3s;
 }
 
 .form__input {
@@ -68,17 +78,39 @@
   bottom: -15px;
   resize: none;
   width: 100%;
+  color: $text-color;
+  
 
     &::placeholder {
       color: $text-color;
       max-width: 500px;
       line-height: 1.5;
+      transition: .3s;
     }
+
+  &:hover {
+    &::placeholder {
+      opacity: .6;
+    }
+  }
+
+  &:focus {
+
+    & ~ .form__icon {
+      opacity: 1;
+    }
+
+    &::placeholder {
+      transform: translateY(70px);
+    }
+
+  }
 }
 
 .form__textarea {
   bottom: -27px;
   height: 70px;
+  overflow: hidden;
 }
 
 .form__btn {

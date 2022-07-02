@@ -1,14 +1,11 @@
 .preview-slider {
   position: relative;
-  width: 90%;
 }
 
 .preview-slider__buttons {
   position: absolute;
-  max-height: 100px;
-  width: 80%;
   overflow: hidden;
-  bottom: 60px;
+  bottom: 15%;
   right: -50px;
 }
 
@@ -19,11 +16,12 @@
 .preview-slider__dots {
   display: flex;
   align-items: center;
+  height: 70px;
+  width: 80%;
 }
 
 
 .preview-slider__dots-item {
-  width: 100%;
   height: 100px;
   cursor: pointer;
 }
@@ -31,6 +29,7 @@
 .preview-slider__dots-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .preview-slider__dots-item--active {

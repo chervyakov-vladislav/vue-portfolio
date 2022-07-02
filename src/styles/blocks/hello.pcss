@@ -17,6 +17,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include desktop {
+
+  }
 }
 
 .hello__user-desc {
@@ -25,6 +29,12 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 
@@ -38,6 +48,10 @@
   &-prof {
     white-space: nowrap;
   }
+
+  @include desktop {
+    margin-right: 30px;
+  }
 }
 
 .hello__title {
@@ -45,6 +59,10 @@
   font-weight: 900;
   line-height: .85;
   width: 700px;
+
+  @include desktop {
+    width: 400px;
+  }
 }
 
 .hello__scroll {

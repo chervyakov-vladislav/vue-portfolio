@@ -8,6 +8,7 @@
     "dev": "webpack-dev-server --mode=development --hot",
     "build": "rm -rf dist && webpack --mode=production --progress",
     "reg": "node reg-util.js",
+    "predeploy": "npm run build",
 		"deploy": "gh-pages -d dist"
   },
   "keywords": [],

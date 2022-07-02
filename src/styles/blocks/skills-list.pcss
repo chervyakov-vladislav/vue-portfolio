@@ -1,14 +1,15 @@
 .skills-list {
   display: flex;
-
+  gap: 50px;
   flex-wrap: wrap;
+  @include desktop {
+    gap: 40px;
+  }
 }
 
 .skills-list__item {
   position: relative;
-  margin-right: 70px;
   max-width: 150px;
-  margin-bottom: 90px;
   width: 100%;
   aspect-ratio: 1/1;
   display: flex;
@@ -17,6 +18,10 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include desktop {
+      width: 90%;
     }
 }
 
@@ -31,5 +36,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 180px;
+  height: 180px;
   transform: translate(-50%, -50%) rotate(250deg);
+  
+  @include desktop {
+    width: 150px;
+    height: 150px;
+  }
 }
