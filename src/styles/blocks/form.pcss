@@ -6,6 +6,9 @@
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 60px;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .form__container {
@@ -13,6 +16,10 @@
 
     @include desktop {
       width: 75%;
+    }
+
+    @include tablets {
+      width: 100%;
     }
 }
 
@@ -26,6 +33,10 @@
   margin-bottom: 60px;
     &:last-child {
       margin-bottom: 0;
+      
+      @include tablets {
+        justify-content: center;
+      }
     }
 }
 
@@ -101,7 +112,7 @@
     }
 
     &::placeholder {
-      transform: translateY(70px);
+      transform: translateY(35px);
     }
 
   }
@@ -111,6 +122,12 @@
   bottom: -27px;
   height: 70px;
   overflow: hidden;
+
+  &:focus { 
+    &::placeholder {
+      transform: translateY(62px);
+    }
+  }
 }
 
 .form__btn {

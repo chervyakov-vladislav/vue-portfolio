@@ -10,15 +10,30 @@
 
 .works__content {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .works__slider {
   width: 55%;
   margin-right: 80px;
+
+  @include tablets {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 80px;
+  }
 }
 
 .works__description {
   width: 35%;
   display: flex;
   justify-content: center;
+
+  @include tablets {
+    width: 100%;
+    text-align: center;
+  }
 }

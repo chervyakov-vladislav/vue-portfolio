@@ -2,12 +2,38 @@
   display: flex;
   justify-content: space-between;  
   align-items: center;
+
+  @include tablets {
+    justify-content: flex-start;
+  }
+}
+
+.header__logo {
+  @include tablets {
+    flex-grow: 1;
+  }
 }
 
 .header__menu { 
   margin: 0 15px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .header__socials {
   margin-top: 5px;
+
+  @include tablets {
+    margin-right: 80px;
+  }
+}
+
+.header__hamburger {
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
 }

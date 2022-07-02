@@ -1,0 +1,31 @@
+.btn-burger {
+  padding: 12px 4px;
+}
+
+.btn-burger__stripes {
+  width: 25px;
+  height: 5px;
+  border-radius: 3px;
+  position: relative;
+  background: $text-color;
+  transition: .4s;
+
+    &::before,&::after {
+      content: "";
+      position: absolute;     
+      width: 25px;
+      height: 5px;
+      transition: .4s;
+      background: $text-color;
+      left: 0;
+      border-radius: 3px;
+    }
+
+    &::before {
+      top: 10px;
+    }
+
+    &::after {
+      top: -10px;
+    }
+}

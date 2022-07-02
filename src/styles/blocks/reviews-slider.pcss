@@ -5,6 +5,10 @@
     @include desktop {
       width: 85%;
     }
+
+    @include tablets {
+      width: 100%;
+    }
 }
 
 .reviews-slider__container {
@@ -24,11 +28,18 @@
   fill: #464d62;
   opacity: .1;
   height: 75px;
+  @include tablets {
+    display: none;
+  }
 }
 
 .reviews-slider__desc {
   width: 70%;
   margin-left: 5%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .reviews-slider__user {

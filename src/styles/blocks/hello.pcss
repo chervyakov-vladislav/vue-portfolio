@@ -35,6 +35,12 @@
     text-align: left;
     align-items: flex-start;
   }
+
+  @include tablets {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -52,6 +58,11 @@
   @include desktop {
     margin-right: 30px;
   }
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .hello__title {
@@ -63,6 +74,10 @@
   @include desktop {
     width: 400px;
   }
+
+  @include tablets {
+    font-size: 48px;
+  }
 }
 
 .hello__scroll {
@@ -70,4 +85,8 @@
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+
+  @include tablets {
+    display: none;
+  }
 }

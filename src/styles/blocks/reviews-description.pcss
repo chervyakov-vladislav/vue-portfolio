@@ -7,9 +7,18 @@
 .reviews-description__title {
   font-size: 36px;
   font-weight: 700;
+
+  @include tablets {
+    font-size: 30px;
+    flex-grow: 1;
+  }
 }
 
 .reviews-description__btn  {
   margin-left: 120px;
+
+  @include tablets {
+   margin-left: 10px;
+  }
 }
 
