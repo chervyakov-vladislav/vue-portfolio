@@ -22,6 +22,10 @@
 .reviews-slider__item {
   min-width: 50%;
   display: flex;
+
+  @include phones {
+    min-width: 100%;
+  }
 }
 
 .reviews-slider__icon {

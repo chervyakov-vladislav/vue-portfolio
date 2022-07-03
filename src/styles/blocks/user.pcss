@@ -1,5 +1,9 @@
 .user {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .user__profile {
@@ -14,6 +18,12 @@
 
   @include tablets {
     width: initial;
+  }
+
+  @include phones {
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 40px;
   }
 }
 

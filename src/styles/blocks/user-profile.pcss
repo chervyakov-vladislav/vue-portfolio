@@ -1,6 +1,10 @@
 .user-profile {
   display: flex;
   flex-direction: column;
+
+  @include phones {
+    align-items: center;
+  }
 }
 
 .user-profile__img {
@@ -12,6 +16,10 @@
   
   @include tablets {
     width: 220px;
+  }
+
+  @include phones {
+    margin-bottom: 20px;
   }
 }
 
@@ -35,6 +43,10 @@
 
   @include tablets {
     width: 230px;
+  }
+
+  @include phones {
+    width: 350px;
   }
 }
 

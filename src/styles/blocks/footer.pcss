@@ -6,6 +6,10 @@
 
 .footer__container {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__left {
@@ -17,6 +21,11 @@
     flex-direction: column;
     margin-right: 20px;
     min-width: 200px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 35px;
   }
 }
 
@@ -33,6 +42,10 @@
 
   @include tablets {
     width: 100%;
+  }
+
+  @include phones {
+    max-width: initial;
   }
 }
 
@@ -59,6 +72,10 @@
     gap: 10px;
     flex-wrap: wrap;
   }
+
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .footer__nav-item {
@@ -67,7 +84,9 @@
     opacity: .6;
   }
 
- 
+  @include phones {
+    width: 40%;
+  }
 }
 
 .footer__desc {
