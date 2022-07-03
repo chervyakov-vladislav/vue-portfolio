@@ -5,6 +5,10 @@
 .navigtion__list {
  display: flex;
  justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .navigation__item {
@@ -21,5 +25,12 @@
 
     @include desktop {
       margin-right: 30px;
+    }
+
+    @include tablets {
+      margin-right: 0;
+      margin-bottom: 30px;
+      font-size: 18px;
+      font-weight: 600;
     }
 }

@@ -90,3 +90,20 @@
     display: none;
   }
 }
+
+.hello__burger-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  transform: translateX(100%);
+  transition: transform .3s;
+
+    @include tablets {
+      display: block;
+    }
+
+    @include phones {
+      left: 0;
+    }
+}

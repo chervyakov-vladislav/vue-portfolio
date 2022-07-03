@@ -1,0 +1,15 @@
+aside.burger-menu 
+  .burger-menu__list
+    include navigation.pug
+  .burger-menu__socials
+    ul.socials
+      each social in socialsArray 
+        li.socials__item
+          a(
+            class="socials__link"
+            href=`${social.link}`
+            target="_blank"
+            )
+            +icon(social.name, `${social.name}__icon`+` socials__icon`)
+  .burger-menu__close
+    button(type="button").close-btn
