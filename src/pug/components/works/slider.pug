@@ -4,19 +4,20 @@
   .preview-slider
     .preview-slider__buttons
       .preview-slider__buttons-wrapper 
-        //-  переверстать полностью когда нужно будет делать компонент vue
-        //- ul.preview-slider__dots
-        //-   li.preview-slider__dots-item.preview-slider__dots-item--active 
-        //-     +image("content/slider-preview.jpg","preview-slider__dots-img")
-        //-   li.preview-slider__dots-item 
-        //-     +image("content/slider-preview-mini-2.jpg","preview-slider__dots-img")
-        //-   li.preview-slider__dots-item
-        //-     +image("content/slider-preview-mini-3.jpg","preview-slider__dots-img")
-        //- .preview-slider__controls 
-        //-   a(href="#" class="preview-slider__left")
-        //-     +icon("arrow-down","preview-slider__icon")
-        //-   a(href="#" class="preview-slider__right")
-        //-     +icon("arrow-down","preview-slider__icon")
+        ul.preview-slider__dots
+          li.preview-slider__dots-item.preview-slider__dots-item--active 
+            +image("content/slider-preview-mini-1.jpg","preview-slider__dots-img")
+          li.preview-slider__dots-item 
+            +image("content/slider-preview-mini-2.jpg","preview-slider__dots-img")
+          li.preview-slider__dots-item
+            +image("content/slider-preview-mini-3.jpg","preview-slider__dots-img")
+          li.preview-slider__dots-item
+            +image("content/slider-preview-mini-4.jpg","preview-slider__dots-img")
+    .preview-slider__controls 
+          a(href="#" class="preview-slider__left")
+            +icon("arrow-down","preview-slider__icon")
+          a(href="#" class="preview-slider__right")
+            +icon("arrow-down","preview-slider__icon")    
 
     .preview-slider__container 
       ul.prewiew-slider__list
@@ -24,6 +25,7 @@
           +image("content/slider-preview.jpg", "prewiew-slider__img")
         li.prewiew-slider__item
           +image("content/slider-preview.jpg", "prewiew-slider__img")
+    .preview-slider__id 4
 
 
 .works__description
@@ -38,5 +40,4 @@
       a(target="blank" href="#").webcite-link
         +icon("link","webcite-link__icon")
         span.webcite-link__text Посмотреть сайт
-    //- .preview-description__id 4
-    //- id прикрутить к основному слайдеру
+    

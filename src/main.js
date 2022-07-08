@@ -5,3 +5,4 @@ if (process.env.NODE_ENV === "development") {
 
 import "./scripts/hamburger-menu";
 import "./scripts/skills.js";
+import "./scripts/works.js";
