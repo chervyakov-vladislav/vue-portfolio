@@ -1,0 +1,37 @@
+[
+  {
+    "listTitle": "Front-end",
+    "skillsList": [
+      {
+        "skillName": "HTML5",
+        "value": 90
+      },{
+        "skillName": "CSS3",
+        "value": 20
+      },{
+        "skillName": "Javascript",
+        "value": 30
+      },{
+        "skillName": "Vue.js",
+        "value": 40
+      }
+    ]
+  },{
+    "listTitle": "Workflow",
+    "skillsList": [
+      {
+        "skillName": "GIT",
+        "value": 50
+      },{
+        "skillName": "Terminal",
+        "value": 60
+      },{
+        "skillName": "Gulp",
+        "value": 70
+      },{
+        "skillName": "Webpack",
+        "value": 80
+      }
+    ]
+  }
+]

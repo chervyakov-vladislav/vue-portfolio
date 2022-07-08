@@ -30,7 +30,7 @@ html(lang="en")
         .container
           include ./pug/components/skills/description.pug
           .skills__competences
-            include ./pug/components/skills/skills-list.pug
+            #competences-component
 
       section.works
         .container
@@ -50,3 +50,5 @@ html(lang="en")
       footer.footer 
         .container.footer__container
           include ./pug/components/footer/footer.pug
+
+    include ./templates/entry.pug
