@@ -1,6 +1,5 @@
 import Vue from "vue";
 
-
 const tags = {
   template: "#works-tags",
   props: ['tags']
@@ -79,7 +78,9 @@ new Vue ({
           this.currentIndex++;
           break;
       }
-      console.log(direction)
+    },
+    clickSlide(index) {
+      this.currentIndex = index - 1;
     }
   },
   created() {

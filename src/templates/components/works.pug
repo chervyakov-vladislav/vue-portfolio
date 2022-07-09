@@ -1,5 +1,3 @@
-- let descriptionSkills = [ "HTML", "CSS", "Javascript" ]
-
 script(type="text/x-template")#works-container
   .works__content
     .works__slider
@@ -7,6 +5,7 @@ script(type="text/x-template")#works-container
         :works="works"
         :current-work="currentWork"
         @slide="handleSlide"
+        @click="clickSlide"
       )
     info(
       :current-work="currentWork"
@@ -18,6 +17,7 @@ script(type="text/x-template")#works-display
       thumbs(
         :works="works"
         :current-work="currentWork"
+        @click="$emit('click', $event)"
       )
     buttons(
       @slide="$emit('slide', $event)"
@@ -43,7 +43,6 @@ script(type="text/x-template")#works-info
           +icon("link","webcite-link__icon")
           span.webcite-link__text Посмотреть сайт
 
-
 script(type="text/x-template")#works-controls
   .preview-slider__controls 
     a(@click.prevent="$emit('slide', 'prev')").preview-slider__left
@@ -57,10 +56,10 @@ script(type="text/x-template")#works-thumbs
       li.preview-slider__dots-item(
         v-for="work in works"
         :key="work.id"
+        @click.prevent="$emit('click', work.id)"
         :class="{active: work.id == currentWork.id}"
         )
         img(:src="work.photo" alt="").preview-slider__dots-img
-
 
 script(type="text/x-template")#works-tags
   ul.tag-list
