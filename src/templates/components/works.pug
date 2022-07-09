@@ -1,0 +1,67 @@
+- let descriptionSkills = [ "HTML", "CSS", "Javascript" ]
+
+script(type="text/x-template")#works-container
+  .works__content
+    .works__slider
+      display(
+        :works="works"
+        :current-work="currentWork"
+        @slide="handleSlide"
+      )
+    info(
+      :current-work="currentWork"
+    )
+      
+script(type="text/x-template")#works-display
+  .preview-slider
+    .preview-slider__buttons
+      thumbs(
+        :works="works"
+        :current-work="currentWork"
+      )
+    buttons(
+      @slide="$emit('slide', $event)"
+    )
+
+    .preview-slider__container 
+      ul.prewiew-slider__list
+        li.prewiew-slider__item
+          img(:src="currentWork.photo" alt="").prewiew-slider__img
+    .preview-slider__id {{currentWork.id}}
+
+script(type="text/x-template")#works-info
+  .works__description
+    .preview-description 
+      .preview-description__skills
+        tags(
+          :tags="tagsArray"
+        )
+      h3.preview-description__title {{currentWork.title}}
+      p.preview-description__desc {{currentWork.desc}}
+      .preview-description__link
+        a(target="blank" :href="currentWork.link").webcite-link
+          +icon("link","webcite-link__icon")
+          span.webcite-link__text Посмотреть сайт
+
+
+script(type="text/x-template")#works-controls
+  .preview-slider__controls 
+    a(@click.prevent="$emit('slide', 'prev')").preview-slider__left
+      +icon("arrow-down","preview-slider__icon")
+    a(@click.prevent="$emit('slide', 'next')").preview-slider__right
+      +icon("arrow-down","preview-slider__icon")    
+
+script(type="text/x-template")#works-thumbs
+  .preview-slider__buttons-wrapper 
+    ul.preview-slider__dots
+      li.preview-slider__dots-item(
+        v-for="work in works"
+        :key="work.id"
+        :class="{active: work.id == currentWork.id}"
+        )
+        img(:src="work.photo" alt="").preview-slider__dots-img
+
+
+script(type="text/x-template")#works-tags
+  ul.tag-list
+    li.tag-list__skill(v-for="tag in tags" :key="tag") {{tag}}
