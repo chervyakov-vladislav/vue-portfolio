@@ -2,37 +2,46 @@
   h2.reviews-description__title Что обо мне говорят
   .reviews-description__btn
     .review-btns
-      a(href="#").review-btns__left
+      a(@click.prevent="previous()" href="#").review-btns__left
         +icon("arrow-down","review-btns__icon")
-      a(href="#").review-btns__right
+      a(@click.prevent="next()" href="#").review-btns__right
         +icon("arrow-down","review-btns__icon")
 .reviews-slider
   .reviews-slider__container 
-    ul.reviews-slider__wrapper
-      li.reviews-slider__item
+    flickity(ref="flickity" :options="flickityOptions").reviews-slider__wrapper
+      .reviews-slider__item
         +icon("quote","reviews-slider__icon")
         .reviews-slider__desc
-          blockquote.reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          blockquote.reviews-slider__text 1 Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
           .reviews-slider__user 
             img(src=require(`images/content/user-old.jpg`) class="reviews-slider__user-img", alt="userold-photo")
             .reviews-slider__user-desc
               .reviews-slider__user-name Константин Константинов
               .reviews-slider__user-position Пластелин Мира
-      li.reviews-slider__item
+      .reviews-slider__item
         +icon("quote","reviews-slider__icon")
         .reviews-slider__desc
-          blockquote.reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          blockquote.reviews-slider__text 2 Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
           .reviews-slider__user 
             img(src=require(`images/content/user-old.jpg`) class="reviews-slider__user-img", alt="userold-photo")
             .reviews-slider__user-desc
               .reviews-slider__user-name Константин Константинов
               .reviews-slider__user-position Пластелин Мира
-      li.reviews-slider__item
+      .reviews-slider__item
         +icon("quote","reviews-slider__icon")
         .reviews-slider__desc
-          blockquote.reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+          blockquote.reviews-slider__text 3 Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
           .reviews-slider__user 
             img(src=require(`images/content/user-old.jpg`) class="reviews-slider__user-img", alt="userold-photo")
             .reviews-slider__user-desc
               .reviews-slider__user-name Константин Константинов
               .reviews-slider__user-position Пластелин Мира
+      //- .reviews-slider__item
+      //-   +icon("quote","reviews-slider__icon")
+      //-   .reviews-slider__desc
+      //-     blockquote.reviews-slider__text Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+      //-     .reviews-slider__user 
+      //-       img(src=require(`images/content/user-old.jpg`) class="reviews-slider__user-img", alt="userold-photo")
+      //-       .reviews-slider__user-desc
+      //-         .reviews-slider__user-name Константин Константинов
+      //-         .reviews-slider__user-position Пластелин Мира

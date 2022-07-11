@@ -8,3 +8,4 @@ import "./scripts/skills.js";
 import "./scripts/works.js";
 import "./scripts/user-profile.js";
 import "./scripts/hello-parallax.js";
+import "./scripts/reviews.js";
