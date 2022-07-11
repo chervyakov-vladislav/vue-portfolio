@@ -1,7 +1,8 @@
 script(type="text/x-template")#user-profile
   article.user-profile
     .user-profile__img
-      +image('content/user.jpg', 'user-profile-pic')
+      //- +image('content/user.jpg', 'user-profile-pic')
+      img(src=require(`images/content/user.jpg`) class="user-profile-pic", alt="user-photo")
     .user-profile__info
       ul.user-profile__props
         li.user-profile__city Проживаю:
