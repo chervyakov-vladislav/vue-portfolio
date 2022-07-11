@@ -1,15 +1,17 @@
 .preview-slider {
   position: relative;
-  width: 90%;
 }
 
 .preview-slider__buttons {
   position: absolute;
-  max-height: 100px;
-  width: 80%;
   overflow: hidden;
-  bottom: 60px;
-  right: -50px;
+  bottom: 15%;
+  right: 0;
+  max-width: 640px;
+  display: flex;
+    @include phones {
+      display: none;
+    }
 }
 
 .preview-slider__buttons-wrapper {
@@ -19,22 +21,49 @@
 .preview-slider__dots {
   display: flex;
   align-items: center;
+
+    @include desktop {
+      transform: translateX(25%);
+    }
+}
+
+.preview-slider__dots .active {
+  &::before {
+    opacity: 1;
+  }
 }
 
 
 .preview-slider__dots-item {
-  width: 100%;
-  height: 100px;
   cursor: pointer;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    background: rgba(#fff, .2);
+    opacity: 0;
+    transition: .3s;
+   }
+
+   &:hover {
+    &::before {
+      opacity: 1;
+    }
+   }
 }
 
 .preview-slider__dots-img {
   width: 100%;
   height: 100%;
-}
-
-.preview-slider__dots-item--active {
-  border: 3px solid #dc9322;
+  object-fit: cover;
   box-sizing: padding-box;
 }
 
@@ -46,12 +75,26 @@
   min-width: 50px;
   aspect-ratio: 1/1;
   background-color: #353e4e;
+  position: absolute;
+  bottom: 15%;
+  right: -50px;
+
+    @include desktop {
+      bottom: -50px;
+      right: 0;
+      flex-direction: row;
+      height: 50px;
+      width: 100px;
+    }
+
+    @include phones {
+      bottom: 0;
+    }
 }
 
 .preview-slider__left, .preview-slider__right {
-  min-width: 50%;
-  aspect-ratio: 1/1;
-  height: 50%;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,11 +102,26 @@
 
 .preview-slider__left {
   transform: rotate(180deg);
+
+  &:hover {
+    .preview-slider__icon {
+      opacity: 1;
+    }
+  }
+}
+
+.preview-slider__right {
+  &:hover {
+    .preview-slider__icon {
+      opacity: 1;
+    }
+  }
 }
 
 .preview-slider__icon {
   fill: #fff;
   opacity: .3;
+  transition: .3s;
 }
 
 .preview-slider__icon {
@@ -87,6 +145,24 @@
 }
 
 .prewiew-slider__img {
-  min-width: 50%;
-  max-width: inherit;
+  width: 100%;
+}
+
+.preview-slider__id {
+  font-size: 400px;
+  color: #e6e6e6;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: -20%;
+  line-height: .8;
+  z-index: -10;
+    
+    @include desktop {
+      right: -30%;
+    }
+
+    @include tablets {
+      display: none;
+    }
 }

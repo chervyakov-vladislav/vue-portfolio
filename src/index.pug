@@ -12,12 +12,16 @@ html(lang="en")
 
       .welcome-section
 
+        include ./pug/components/parallax/balloon.pug
+
         section.fullscreen-section.hello
           .container.hello__container
             include ./pug/components/hello/header.pug
             include ./pug/components/hello/content.pug
             .hello__scroll
               include ./pug/components/hello/scroll.pug
+          .hello__burger-menu 
+            include ./pug/components/hello/hamburger-menu.pug
 
         section.about
           .container
@@ -28,19 +32,20 @@ html(lang="en")
         .container
           include ./pug/components/skills/description.pug
           .skills__competences
-            include ./pug/components/skills/skills-list.pug
+
+            #competences-component
 
       section.works
         .container
           h2.works__title Мои работы
-          .works__content
-            include ./pug/components/works/slider.pug
+          
+          #works-component
 
       .budda-section
         svg.triangles__budda(viewBox="0 0 1000 100" preserveAspectRatio="none")
           polygon(points="0,0 500,100 1000,0")
         .container
-          section.reviews
+          section.reviews#review-component
             include ./pug/components/reviews/reviews.pug
           section.form-section
             include ./pug/components/form/form.pug
@@ -48,3 +53,5 @@ html(lang="en")
       footer.footer 
         .container.footer__container
           include ./pug/components/footer/footer.pug
+
+    include ./templates/entry.pug

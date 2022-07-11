@@ -1,0 +1,32 @@
+.burger-menu {
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 65px;
+  position: relative;
+
+  @include phones {
+    width: 100%;
+
+    padding-left: 95px;
+  }
+}
+
+.burger-menu__list {
+  margin-bottom: 50px;
+}
+
+.burger-menu__close {
+  position: absolute;
+  top: 7%;
+  right: 10%;
+  padding: 10px;
+  display: flex;
+
+  &:hover {
+    opacity: .6;
+  }
+}

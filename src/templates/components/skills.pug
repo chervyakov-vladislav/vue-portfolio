@@ -1,0 +1,21 @@
+script(type="text/x-template")#skills-list
+  ul.competences
+    li.competences__item(v-for="skill in skills" :key="skill.listTitle")
+      skills-row(
+        :skill="skill"
+      )
+        
+script(type="text/x-template")#skills-row
+  .competences__row
+    .competence__title {{skill.listTitle}}
+    ul.skills-list.competence__skills
+      li.competences__skill-item(v-for="circle in skill.skillsList" :key="skill.skillName")
+        skills-circle(
+          :skillName="circle.skillName"
+          :skillPercent="circle.value"
+        )
+
+script(type="text/x-template")#skills-circle
+  .skills-list__item
+    span.skills-list__item-text {{skillName}}
+    +circle(200, 80, 10, 'blue', 'skills-list__circle')

@@ -10,11 +10,20 @@
       margin-right: 0;
     }
 
+  @include desktop {
+    margin-right: 20px;
+  }
+
 }
 
 .socials__link {
   width: 100%;
   height: 100%;
+  transition: .3s;
+
+  &:hover {
+    opacity: .6;
+  }
 }
 
 .socials-footer__link {

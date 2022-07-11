@@ -7,8 +7,22 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 2;
+
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .competence__skills {
-  margin: 50px 0 0;
+  margin: 50px 0;
+
+  @include phones {
+    margin-top: 5px;
+  }
+}
+
+.competences__skill-item {
+  max-width: 9.375rem;
+  width: 100%;
+  aspect-ratio: 1/1;
 }

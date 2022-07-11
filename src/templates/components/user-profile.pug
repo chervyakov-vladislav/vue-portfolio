@@ -1,0 +1,14 @@
+script(type="text/x-template")#user-profile
+  article.user-profile
+    .user-profile__img
+      //- +image('content/user.jpg', 'user-profile-pic')
+      img(src=require(`images/content/user.jpg`) class="user-profile-pic", alt="user-photo")
+    .user-profile__info
+      ul.user-profile__props
+        li.user-profile__city Проживаю:
+        li.user-profile__age Возраст:
+        li.user-profile__bday Родился:
+      ul.user-profile__data
+        li.user-profile__city-value {{user.city}}
+        li.user-profile__age-value {{user.age}}
+        li.user-profile__bday-value {{user.bday}}

@@ -1,5 +1,9 @@
 .user {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .user__profile {
@@ -7,12 +11,30 @@
   justify-content: flex-end;
   width: 40%;
   margin-right: 50px;
+
+  @include desktop {
+    margin-right: 30px;
+  }
+
+  @include tablets {
+    width: initial;
+  }
+
+  @include phones {
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .user__description {
   display: flex;
   flex-direction: column;
   width: 60%;
+
+  @include tablets {
+    width: initial;
+  }
 }
 
 .user__greeting, .user__text {
@@ -21,9 +43,21 @@
   line-height: 1.8;
   width: 65%;
   margin-top: 20px;
+
+  @include desktop {
+    width: 85%;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .user__name {
   font-size: 36px;
   font-weight: 700; 
+
+  @include tablets {
+    font-size: 30px;
+  }
 }

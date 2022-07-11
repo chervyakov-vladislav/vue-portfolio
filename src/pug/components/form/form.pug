@@ -1,21 +1,22 @@
-include ./../../layout/mixins.pug
-
 h2.form__title Связаться со мной
 .form__container
   form.form(action="#")
     .form__row
       label.form__block
+        input.form__input(type="text" name="name" placeholder="Дмитрий Комиссаренко") 
         span.form__block-text Введите ваше имя
         +icon("user","form__icon")
-        input.form__input(type="text" name="name" placeholder="Дмитрий Комиссаренко") 
+        
       label.form__block
+        input.form__input(type="email" name="email" placeholder="school@study.com") 
         span.form__block-text Введите ваш email
         +icon("envelope","form__icon")
-        input.form__input(type="email" name="email" placeholder="school@study.com") 
+        
     .form__row
       label.form__block
+        textarea(name="comment" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса").form__input.form__textarea
         span.form__block-text.form__textarea-text Сообщение к письму
         +icon("message","form__icon")
-        textarea(name="comment" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса").form__input.form__textarea
+        
     .form__row
       button(type="submit" id="sendBtn").btn.form__btn Отправить

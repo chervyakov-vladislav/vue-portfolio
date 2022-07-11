@@ -1,6 +1,14 @@
 .reviews-slider {
   width: 70%;
   aspect-ratio: 3/1;
+
+    @include desktop {
+      width: 85%;
+    }
+
+    @include tablets {
+      width: 100%;
+    }
 }
 
 .reviews-slider__container {
@@ -8,23 +16,34 @@
 }
 
 .reviews-slider__wrapper {
-  display: flex;
+  // display: flex;
 }
 
 .reviews-slider__item {
-  min-width: 50%;
+  width: 50%;
   display: flex;
+
+  @include phones {
+    min-width: 100%;
+  }
 }
 
 .reviews-slider__icon {
   fill: #464d62;
   opacity: .1;
   height: 75px;
+  @include tablets {
+    display: none;
+  }
 }
 
 .reviews-slider__desc {
   width: 70%;
   margin-left: 5%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .reviews-slider__user {

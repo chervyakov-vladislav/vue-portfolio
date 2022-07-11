@@ -17,6 +17,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include desktop {
+
+  }
 }
 
 .hello__user-desc {
@@ -25,6 +29,18 @@
   justify-content: center;
   text-align: center;
   flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  @include tablets {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -38,6 +54,15 @@
   &-prof {
     white-space: nowrap;
   }
+
+  @include desktop {
+    margin-right: 30px;
+  }
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .hello__title {
@@ -45,6 +70,14 @@
   font-weight: 900;
   line-height: .85;
   width: 700px;
+
+  @include desktop {
+    width: 400px;
+  }
+
+  @include tablets {
+    font-size: 48px;
+  }
 }
 
 .hello__scroll {
@@ -52,4 +85,25 @@
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.hello__burger-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  transform: translateX(100%);
+  transition: transform .3s;
+
+    @include tablets {
+      display: block;
+    }
+
+    @include phones {
+      left: 0;
+    }
 }

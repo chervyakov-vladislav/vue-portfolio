@@ -6,20 +6,47 @@
 
 .footer__container {
   display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 
 .footer__left {
   width: 30%;
   display: flex;
+
+  @include tablets {
+    width: initial;
+    flex-direction: column;
+    margin-right: 20px;
+    min-width: 200px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
 }
 
 .footer__right {
   width: 70%;
+  @include tablets {
+    width: initial;
+  }
 }
 
 .footer__userinfo {
   width: 50%;
   max-width: 170px;
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    max-width: initial;
+  }
 }
 
 .footer__username {
@@ -39,20 +66,54 @@
 .footer__nav-list {
   display: flex;
   justify-content: space-between;
+
+  @include tablets {
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+.footer__nav-item {
+  transition: .3s;
+  &:hover {
+    opacity: .6;
+  }
+
+  @include phones {
+    width: 40%;
+  }
 }
 
 .footer__desc {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .footer__socials  {
   width: 50%;
   display: flex;
   justify-content: center;
+  
+  @include tablets {
+    width: initial;
+    margin-bottom: 20px;
+  }
 }
 
 .footer__text {
   width: 50%;
+  
+  @include tablets {
+    width: initial;
+  }
 }
 
 .footer__declaration {

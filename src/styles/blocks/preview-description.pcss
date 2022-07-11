@@ -8,6 +8,15 @@
 
 .preview-description__skills {
   margin-bottom: 30px;
+
+  @include tablets {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include phones {
+    justify-content: flex-start;
+  }
 }
 
 .preview-description__skills-list {
@@ -41,15 +50,4 @@
   opacity: .7;
   line-height: 1.7;
   margin-bottom: 30px;
-}
-
-.preview-description__id {
-  font-size: 400px;
-  color: #e6e6e6;
-  font-weight: 900;
-  position: absolute;
-  top: 0;
-  left: -55%;
-  line-height: .8;
-  z-index: -10;
 }
